@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <h1>Регистрация нового профиля</h1>
+
+    <hr>
+
+    <form action="" method="post">
+
+        <input type="text" name="firstName" required id="firstName">
+        <label for="firstName">Имя</label>
+
+        <br>
+        <br>
+
+        <input type="text" name="lastName" required id="lastName">
+        <label for="lastName">Фамилия</label>
+
+        <br>
+        <br>
+
+        <label>
+            Укажите пол:
+            <input type="radio" name="man_woman" value="man">
+            м
+            <input type="radio" name="man_woman" value="woman">
+            ж
+        </label>
+
+        <br>
+        <br>
+
+        Дата рождения:
+        <input type="date" name="Birthday" required placeholder="введите данные">
+
+        <br>
+        <br>
+
+        Выберите город:
+        <select name="city1">
+            <option value="Minsk">Минск</option>
+            <option value="Almaty">Алматы</option>
+            <option value="Astana" selected>Астана</option>
+        </select>
+
+        <br>
+        <br>
+
+        <label>
+            <p>О себе:</p>
+            <textarea name="info" id="" cols="30" rows="10" maxlength="150"
+                placeholder="Макс длина 150 символов"></textarea>
+        </label>
+
+        <br>
+        <br>
+
+        <label>
+            <input type="tel" name="phone" pattern="[0-9]{10}" required>
+            Номер телефона
+        </label>
+
+        <br>
+        <br>
+
+        <label>
+            <input type="email" name="emailForm" required>
+            Email
+        </label>
+
+        <br>
+        <br>
+
+        <label>
+            <input type="password" name="lastName6" required>
+            Придумайте пароль
+        </label>
+
+        <br>
+        <br>
+
+        <label>
+            <input type="password" name="lastName6" required>
+            Подтвердите пароль
+        </label>
+
+        <br>
+        <br>
+
+
+        <label>
+            <input type="checkbox" name="terms" required>
+            Я согласен с условиями использования
+        </label>
+
+
+        <br>
+        <br>
+        <button type="submit">Регистрация</button>
+
+    </form>
+
+</body>
+
+</html>
