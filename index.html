@@ -4,16 +4,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="./feedback_rating_award_medal_badge_little_star_game_icon_262439.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css" />
+    <link rel="shortcut icon" href="./feedback_rating_award_medal_badge_little_star_game_icon_262439.png"
+        type="image/x-icon">
+    <link rel="stylesheet" href="./style.css">
     <title>Frontend</title>
 </head>
 
 <body>
 
-    <h1>Frontend</h1>
+    <div class="navbar">
+        <a href="#home">Homepage</a>
+        <a href="#homeworks">Homeworks</a>
+        <a href="#lessons">Lessons</a>
+    </div>
 
-    <ul>
-        <p>Homeworks:</p>
+    <div>
+        <h1 id="home" data-aos="fade-up">Frontend</h1>
+    </div>
+
+    <ul id="homeworks">
+        <p> <i class="fas fa-book-open"></i> Homeworks:</p>
         <li><a href="./homeworks\homework_01\index.html">homework_01</a></li>
         <li><a href="./homeworks\homework_02\index.html">homework_02</a></li>
     </ul>
@@ -22,12 +35,21 @@
     <hr>
     <br>
 
-    <ul>
-        <p>Lessons:</p>
+    <ul id="lessons">
+        <p><i class="fas fa-chalkboard-teacher"></i> Lessons:</p>
         <li><a href="./lessons\lesson_01\index.html">lesson_01</a></li>
         <li><a href="./lessons\lesson_02\index.html">lesson_02</a></li>
         <li><a href="./lessons\lesson_03\index.html">lesson_03</a></li>
     </ul>
+
+    <div class="footer">
+        <p>Copyright © Max Openkin 2024</p>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 
 </body>
 
