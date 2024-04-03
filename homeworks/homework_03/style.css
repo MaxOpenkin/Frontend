@@ -1,0 +1,68 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(100deg, #fffafa 20%, #fff4e6 100%);
+}
+
+p {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.div1, .div2, .div3 {
+    box-shadow: 0 16px 32px 0 rgba(0,0,0,0.2);
+    margin: 30px;
+    padding: 20px;
+    width: 400px;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.div1:hover, .div2:hover, .div3:hover {
+    transform: scale(1.05); /* Масштабирование */
+    box-shadow: 0 20px 40px 0 rgba(0,0,0,0.3); /* Углубленная тень */
+}
+
+.div1 {
+    border: 2px solid rgb(55, 61, 114);
+    border-radius: 10% / 50%;
+    background: radial-gradient(#cfcfe7 50%, #a7b7fc 80%);
+}
+
+.div2 {
+    border: 2px hidden black;
+    border-radius: 10% 30% 50% 70%;
+    background: radial-gradient(#cfcfe7 50%, #a7b7fc 80%);
+}
+
+.div3 {
+    border: 2px dashed rgb(107, 34, 65);
+    border-radius: 50% 20% / 10% 40%;
+    background: radial-gradient(#e7cfcf 50%, #fca7a7 80%);
+}
+
+.male::before, .female::before {
+    font-size: larger;
+}
+
+.male::before {
+    content: "\2642"; /* Unicode символ для мужчины */
+    margin-right: 5px;
+    color: #0000ff;
+}
+
+.female::before {
+    content: "\2640"; /* Unicode символ для женщины */
+    margin-right: 5px;
+    color: #ff1493;
+}
+
+
