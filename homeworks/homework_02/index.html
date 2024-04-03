@@ -10,109 +10,79 @@
 
 <body>
 
-    <h1>Регистрация нового профиля</h1>
+    <div class="container">
+        <h1>Регистрация нового профиля</h1>
+        <hr>
+        <form>
+            <div class="form-row">
+                <div class="form-column">
+                    <input type="text" name="firstName" required id="firstName">
+                    <label for="firstName">Имя</label>
+                </div>
+                <div class="form-column">
+                    <input type="text" name="lastName" required id="lastName">
+                    <label for="lastName">Фамилия</label>
+                </div>
+            </div>
 
-    <hr>
+            <div class="form-row">
+                <div class="form-full">
+                    Укажите пол:
+                    <input type="radio" name="man_woman" value="man"> м
+                    <input type="radio" name="man_woman" value="woman"> ж
+                </div>
+            </div>
 
-    <form>
+            <div class="form-row">
+                <div class="form-column">
+                    Дата рождения:
+                    <input type="date" name="Birthday" required>
+                </div>
+                <div class="form-column">
+                    Выберите город:
+                    <select name="city1">
+                        <option value="Minsk">Минск</option>
+                        <option value="Almaty">Алматы</option>
+                        <option value="Astana" selected>Астана</option>
+                    </select>
+                </div>
+            </div>
 
-        <input type="text" name="firstName" required id="firstName">
-        <label for="firstName">Имя</label>
+            <div class="form-full">
+                <p>О себе:</p>
+                <textarea name="info" maxlength="150" placeholder="Макс длина 150 символов"></textarea>
+            </div>
 
-        <br>
-        <br>
+            <div class="form-row">
+                <div class="form-column">
+                    <input type="tel" name="phone" pattern="[0-9]{10}" required>
+                    <label>Номер телефона</label>
+                </div>
+                <div class="form-column">
+                    <input type="email" name="emailForm" required>
+                    <label>Email</label>
+                </div>
+            </div>
 
-        <input type="text" name="lastName" required id="lastName">
-        <label for="lastName">Фамилия</label>
+            <div class="form-row">
+                <div class="form-column">
+                    <input type="password" name="password" required>
+                    <label>Придумайте пароль</label>
+                </div>
+                <div class="form-column">
+                    <input type="password" name="confirmPassword" required>
+                    <label>Подтвердите пароль</label>
+                </div>
+            </div>
 
-        <br>
-        <br>
+            <div class="form-full">
+                <input type="checkbox" name="terms" required value="true">Я согласен с условиями использования
+            </div>
 
-        <div>
-            Укажите пол:
-            <label>
-                <input type="radio" name="man_woman" value="man">
-                м
-            </label>
-            <label>
-                <input type="radio" name="man_woman" value="woman">
-                ж
-            </label>
-        </div>
-
-        <br>
-        <br>
-
-        Дата рождения:
-        <input type="date" name="Birthday" required placeholder="введите данные">
-
-        <br>
-        <br>
-
-        Выберите город:
-        <select name="city1">
-            <option value="Minsk">Минск</option>
-            <option value="Almaty">Алматы</option>
-            <option value="Astana" selected>Астана</option>
-        </select>
-
-        <br>
-        <br>
-
-        <label>
-            <p>О себе:</p>
-            <textarea name="info" id="" cols="30" rows="10" maxlength="150"
-                placeholder="Макс длина 150 символов"></textarea>
-        </label>
-
-        <br>
-        <br>
-
-        <label>
-            <input type="tel" name="phone" pattern="[0-9]{10}" required>
-            Номер телефона
-        </label>
-
-        <br>
-        <br>
-
-        <label>
-            <input type="email" name="emailForm" required>
-            Email
-        </label>
-
-        <br>
-        <br>
-
-        <label>
-            <input type="password" name="lastName6" required>
-            Придумайте пароль
-        </label>
-
-        <br>
-        <br>
-
-        <label>
-            <input type="password" name="lastName6" required>
-            Подтвердите пароль
-        </label>
-
-        <br>
-        <br>
-
-
-        <label>
-            <input type="checkbox" name="terms" required>
-            Я согласен с условиями использования
-        </label>
-
-
-        <br>
-        <br>
-        <button type="submit">Регистрация</button>
-
-    </form>
-
+            <button type="submit">Регистрация</button>
+        </form>
+    </div>
+    
 </body>
 
 </html>

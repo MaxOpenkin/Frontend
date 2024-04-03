@@ -1,27 +1,45 @@
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f4f4f4;
-    padding: 20px; /* Уменьшенный отступ для body */
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f7f6;
 }
 
-form {
-    max-width: 500px;
-    margin: auto;
-    padding: 15px; /* Уменьшенные внутренние отступы формы */
+.container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
     background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 h1 {
     color: #333;
     text-align: center;
-    margin-bottom: 15px; /* Уменьшенный отступ под заголовком */
-    font-size: 18px; /* Меньший размер шрифта для заголовка */
 }
 
 hr {
-    margin-bottom: 10px; /* Уменьшенный отступ под разделителем */
+    border: none;
+    height: 1px;
+    background-color: #e0e0e0;
+    margin: 20px 0;
+}
+
+/* Стилизация формы */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-row {
+    display: flex;
+    gap: 20px;
+}
+
+.form-column, .form-full {
+    flex: 1;
 }
 
 input[type="text"],
@@ -31,43 +49,75 @@ input[type="email"],
 input[type="password"],
 select,
 textarea {
-    width: calc(100% - 20px);
-    padding: 8px; /* Уменьшенные внутренние отступы */
-    margin-bottom: 1px; /* Уменьшенное расстояние между полями */
+    width: 100%;
+    padding: 10px;
+    margin-top: 6px;
+    border: 2px solid #ddd;
     border-radius: 4px;
-    border: 1px solid #ccc;
-    font-size: 14px; /* Меньший размер шрифта для полей ввода */
+    box-sizing: border-box;
+    transition: border-color 0.3s;
 }
 
-input[type="radio"],
-input[type="checkbox"] {
-    margin-right: 5px;
-    transform: scale(0.9); /* Уменьшенный размер радио кнопок и чекбоксов */
+input[type="text"]:focus,
+input[type="date"]:focus,
+input[type="tel"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+select:focus,
+textarea:focus {
+    border-color: #7cacde;
 }
 
 label {
-    margin-bottom: 2px; /* Уменьшенное расстояние между label и полями */
-    font-weight: bold;
-    font-size: 14px; /* Меньший размер шрифта для меток */
+    display: block;
+    margin-top: 20px;
+    color: #666;
+    transition: all 0.3s;
+    pointer-events: none;
 }
 
-input[type="submit"],
+input:focus + label,
+select:focus + label {
+    color: #7cacde;
+    transform: scale(0.9) translateY(-30px);
+}
+
+/* Стилизация радиокнопок и чекбоксов */
+input[type="radio"],
+input[type="checkbox"] {
+    margin-right: 10px;
+}
+
 button {
-    width: 100%;
     padding: 10px;
     border: none;
     border-radius: 4px;
+    background-color: #7cacde;
     color: #fff;
-    background-color: #007bff;
     cursor: pointer;
-    font-size: 14px; /* Меньший размер шрифта для кнопки */
+    transition: background-color 0.3s;
 }
 
-input[type="submit"]:hover,
 button:hover {
-    background-color: #0056b3;
+    background-color: #669ecb;
 }
 
+/* О себе и текстовые поля */
 textarea {
+    height: 100px;
     resize: vertical;
+}
+
+/* Дополнительные стили */
+.form-column input,
+.form-column label {
+    transition: all 0.3s;
+}
+
+.form-column label {
+    position: relative;
+    bottom: 10px;
+    left: 10px;
+    background-color: #fff;
+    padding: 0 5px;
 }
