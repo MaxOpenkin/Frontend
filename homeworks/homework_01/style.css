@@ -1,0 +1,54 @@
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    background-color: #f4f4f4;
+    padding: 20px;
+    margin: 0;
+}
+
+div {
+    margin-bottom: 20px;
+}
+
+h1, h2 {
+    color: #3b5998; /* Facebook Blue */
+}
+
+p {
+    line-height: 1.6;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto 20px; /* Centering the image and adding space below */
+}
+
+table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+}
+
+th, td {
+    text-align: left;
+    padding: 8px;
+    border-bottom: 1px solid #ddd; /* Light grey border */
+}
+
+th {
+    background-color: #3b5998;
+    color: white;
+}
+
+a {
+    color: #3b5998;
+    text-decoration: none;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+a:hover {
+    text-decoration: underline;
+}
