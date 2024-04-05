@@ -97,7 +97,7 @@ body {
     color: #333;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 500px) {
     .card-container {
         gap: 30px; /* Уменьшаем расстояние между карточками */
         
