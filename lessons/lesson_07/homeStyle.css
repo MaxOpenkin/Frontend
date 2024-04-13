@@ -133,11 +133,13 @@ button {
 
 .products-card-wrapper{
     display: flex;
-    justify-content: space-between;
+    /* justify-content: space-between; */
+    text-align: center;
+    /* gap: 0 40px; */
+    flex-wrap: wrap;
     gap: 15px;
     margin: 20px;
-    flex-wrap: wrap;
-    align-content: flex-start;
+    /* align-content: flex-start; */
 
 }
 

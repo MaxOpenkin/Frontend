@@ -23,6 +23,14 @@ ul {
     list-style: none;
 }
 
+.title {
+    text-align: center;
+    margin-bottom: 60px;
+    font-family: "Cormorant", serif;
+    font-size: 40px;
+    font-weight: 400;
+}
+
 .container {
     max-width: 1240px;
     margin: 0 auto;
@@ -37,7 +45,7 @@ body {
     font-size: 20px;
     font-weight: 300;
     line-height: 1.5;
-    /* position: relative; */
+    position: relative;
 }
 
 .header_inner {
@@ -62,19 +70,19 @@ body {
     z-index: 2;
 }
 
-.menu-close{
+.menu-close {
     display: none;
     position: absolute;
     left: 0;
     right: 0;
     bottom: 0;
     top: 0;
-    background-color: rgba(0,0,0,.5);
+    background-color: rgba(0, 0, 0, .5);
     z-index: 1;
     transition: background-color .3s ease;
 }
 
-.menu-close.menu-open{
+.menu-close.menu-open {
     display: block;
 }
 
@@ -152,10 +160,73 @@ body {
     margin: 150px auto;
 }
 
+.assortment {
+    margin-bottom: 150px;
+}
+
+.assortment_list {
+    text-align: center;
+    display: flex;
+    gap: 0 40px;
+    padding-left: 0;
+}
+
+.assortment_img {
+    max-width: 208px;
+    max-height: 208px;
+    width: 100%;
+}
+
+.assortment_name {
+    font-family: "Cormorant", serif;
+    padding-top: -10px;
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.reviews {
+    background-color: #F7F2EA;
+    padding: 60px 0;
+}
+
+.reviews_list {
+    display: flex;
+    gap: 0 26px;
+}
+
+.reviews_item {
+    flex-basis: 280px;
+}
+
+.reviews_text {
+    font-size: 16px;
+    font-style: italic;
+    margin-bottom: 10px;
+}
+
+.reviews_name {
+font-weight: 600;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
 @media (max-width: 1000px) {
+    .title {
+        margin-bottom: 30px;
+    }
+
     .user-actions_item-search {
         margin-left: 30px;
     }
@@ -180,6 +251,18 @@ body {
         margin-top: 120px;
         margin-bottom: 135px;
     }
+
+    .assortment {
+        margin-bottom: 120px;
+    }
+
+    .assortment_list {
+        gap: 0;
+    }
+}
+
+.open {
+    background-color: #000;
 }
 
 @media (max-width: 860px) {
@@ -265,6 +348,8 @@ body {
         margin-left: 0;
     }
 
+
+
     .header_inner {
         padding-left: 64;
         padding-right: 64;
@@ -272,6 +357,11 @@ body {
 
     .blockquote_text {
         max-width: 640px;
+    }
+
+    .assortment_list {
+        flex-wrap: wrap;
+        justify-content: center;
     }
 }
 
@@ -319,9 +409,17 @@ body {
     .menu_list {
         width: 360px;
     }
+
+    .assortment {
+        margin-bottom: 60px;
+    }
 }
 
 @media (max-width: 360px) {
+    .title {
+        margin-bottom: 10px;
+    }
+
     .logo {
         margin-right: 30px;
     }
@@ -351,6 +449,14 @@ body {
     .blockquote_text {
         max-width: 340px;
         margin-top: 70px;
+        margin-bottom: 80px;
+    }
+
+    .assortment_img {
+        max-width: 160px;
+    }
+
+    .assortment {
         margin-bottom: 80px;
     }
 }
