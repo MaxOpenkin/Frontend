@@ -1,70 +1,101 @@
-// window.document.writeln('hello world!');
-// document.writeln('hello world!');
+// вывод в html текста
+// document.writeln('hello world');
+// window.document.writeln('hello world');
 
-// sozdaem element div
+// создаем элемент div
 const div1 = document.createElement('div');
-div1.innerText = 'div1'; // text v elemente
-document.body.appendChild(div1); // dobavlyaem sozdanyi element na stranitcu
 
+// добавляем контект (текст) для элемента div
+div1.innerText = 'div1';
+div1.id = 'my-id-2';
+div1.className = 'test111';
+// добавить кастомный атрибут
+div1.setAttribute('test', 'xxx');
+
+// можно вывести в консоль элемент html
+// console.log(div1);
+
+// добавляем созданный элемен на страницу
+document.body.appendChild(div1);
+
+// создаем и добавляем на страницу заголовок 1 уровня (h1)
 const h1 = document.createElement('h1');
-h1.innerText = 'Zagolovok 1 level';
+h1.innerText = 'Заголовок 1 уровня';
 document.body.appendChild(h1);
 
-// -------------------
+// -------------
 
+// Положили h2 внутрь div (предварительно создав оба элеимента)
 const div2 = document.createElement('div');
 const h2 = document.createElement('h2');
-h2.innerText = 'Zagolovok 2 level';
+h2.innerText = 'привет';
 
-document.body.appendChild(div2);
+
 div2.appendChild(h2);
 
-// -------------------
+document.body.appendChild(div2);
 
-const myDivId = document.getElementById('my-div-id');
-const myDivList1 = document.getElementsByClassName('my-div-class');
-const myDivList2 = document.getElementsByClassName('div');
+// ----------------
 
-// -------------------
+// получить элемент по id
+const myDiv1 = document.getElementById('my-div-id');
+// console.log(myDiv1);
 
+// получили список элементов с классом my-div-class
+const myDivList = document.getElementsByClassName('my-div-class');
+// console.log(myDivList);
+
+// получаем элементы по тегу (список)
+const myDivList2 = document.getElementsByTagName('div');
+// console.log(myDivList2);
+
+// ----------------
 const div3 = document.getElementById('my-div-id');
-div3.className = 'test'; // dobavit class k elementu (peretret drugie classy)
-console.log(div3);
-div3.classList.add('test'); // dabavit class 
-// div3.id = 'xxx'; // perezapis id
 
-const div4 = document.querySelector('.my-div-class');
-const div5 = document.querySelectorAll('.my-div-class');
+// добавить класс к элементу (перетрет другие классы)
+// div3.className = 'test';
 
-const div6 = document.getElementById('my-div-id');
-div6.innerHTML = ul1;
+// добавить класс 
+div3.classList.add('test');
 
-// udalenie elementa
+// console.log(div3);
+
+// ----------
+
+
+// добавление строки в виде html внутрь элемента
+const ul1 = `
+    <ul>
+        <li class='test'>item1</li>
+        <li>item2</li>
+    </ul>
+`;
+
+const div4 = document.getElementById('my-div-id');
+div4.innerHTML = ul1;
+
+// -----------
+const div5 = document.querySelector('.my-div-class');
+
+const div6 = document.querySelectorAll('.my-div-class');
+const div7 = document.querySelector('#my-div-id');
+// console.log(div7);
+
+
+// удаление элемента через фызов функции
 const deleteElement = () => {
     const divForDelete = document.getElementById('my-div-id');
     divForDelete.remove();
 }
+const deleteAllDivs = () => {
+    const divs = document.querySelectorAll('div');
+    
 
-
-document.addEventListener('DOMContentLoaded', function () {
-    const deleteElement = () => {
-        const divForDelete = document.getElementById('my-div-id');
-        if (divForDelete) {
-            divForDelete.remove();
-        } else {
-            console.error('Element not found!');
-        }
-    };
-
-    const button = document.querySelector('button');
-    if (button) {
-        button.onclick = deleteElement;
-    } else {
-        console.error('Button not found!');
+    for (let i = 0; i < divs.length; i++) {
+        const currentDiv = divs[i];
+        console.log(currentDiv);
+        currentDiv.remove();
     }
-});
-
-// Этот подход убедится, что ваши элементы и функции будут полностью доступны перед тем,
-// как присваивать события или выполнять действия.
+}
 
 

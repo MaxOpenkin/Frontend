@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./main.js" defer></script>
+    <title>Document</title>
+    <style>
+        #cards-container {
+            display: flex;
+            flex-wrap: wrap;
+            align-content: center;
+            gap: 10px;
+        }
+
+        .card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .card h3 {
+            margin: 0;
+            color: #333;
+        }
+
+        .card p {
+            color: #666;
+        }
+
+        .card img {
+            width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="strings-container"></div>
+    <div id="text-div">Текст для изменения цвета</div>
+    <button id="change-color-button">OK</button>
+    <br>
+    <button id="add-card-button">Добавить карточку</button>
+    <div id="cards-container"></div>
+
+</body>
+
+</html>
