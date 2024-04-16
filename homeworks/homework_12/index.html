@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./main.js" defer></script>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="main">
+        <div class="container-password">
+            <form id="password-form">
+                <label for="username">Логин:</label>
+                <input type="text" id="username" required>
+                <label for="password">Пароль:</label>
+                <input type="password" id="password" required>
+                <label for="password-repeat">Повторите пароль:</label>
+                <input type="password" id="password-repeat" required>
+                <button type="submit">Отправить</button>
+            </form>
+            <div id="message"></div>
+        </div>
+
+        <div class="container-calc">
+            <form id="quadratic-form">
+                <input type="number" id="a" placeholder="a" required>
+                <input type="number" id="b" placeholder="b" required>
+                <input type="number" id="c" placeholder="c" required>
+                <button type="submit">Вычислить</button>
+            </form>
+            <div id="result"></div>
+        </div>
+    </div>
+</body>
+
+</html>
