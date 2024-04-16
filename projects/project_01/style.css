@@ -231,10 +231,18 @@ body {
     gap: 0 20px;
 }
 
+.main-blog_item-content {
+    display: flex;
+    flex-direction: column;
+}
+
 .main-blog_item-title {
     font-size: 24px;
     font-family: "Cormorant", serif;
     font-weight: 400;
+    margin-bottom: 10px;
+    min-height: 86px;
+    margin-top: 0;
 }
 
 .main-blog_item-author {
@@ -242,10 +250,35 @@ body {
 }
 
 .main-blog_item-link {
+    margin-top: auto;
     font-size: 13px;
+    position: relative;
 }
 
+.main-blog_item-link::after {
+    content: '';
+    background-image: url(./images/arrow.svg);
+    position: absolute;
+    width: 5px;
+    height: 10px;
+    margin-left: 8px;
+    bottom: 4px;
+}
 
+.main-blog_link {
+    padding: 12px 41px;
+    display: flex;
+    justify-content: center;
+    margin: 72px auto 0;
+    border: 1px solid #151618;
+    width: 152px;
+}
+
+.mailing-list {
+    padding: 100px 0;
+    background-color: #F7F2EA;
+    background-image: url(./images/mailing-bg.png);
+}
 
 
 
