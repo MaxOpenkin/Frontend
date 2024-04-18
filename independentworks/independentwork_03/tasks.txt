@@ -1,0 +1,89 @@
+Задача 1: Фильтрация уникальных элементов
+Условие: Дан массив чисел, включающий повторения. Напишите функцию, которая использует filter и indexOf для создания нового массива, содержащего только уникальные числа из исходного массива.
+
+javascript
+Copy code
+const numbers = [1, 2, 2, 3, 4, 4, 5];
+const uniqueNumbers = numbers.filter((value, index, self) => self.indexOf(value) === index);
+console.log(uniqueNumbers); // [1, 2, 3, 4, 5]
+
+
+
+Задача 2: Группировка по свойству
+Условие: Дан массив объектов, где каждый объект представляет собой студента с полями name, grade, и score. Напишите функцию, которая группирует студентов по оценкам и возвращает объект, где ключи — это оценки, а значения — массивы студентов, получивших эти оценки.
+
+javascript
+Copy code
+const students = [
+    { name: "Alice", grade: "A", score: 90 },
+    { name: "Bob", grade: "B", score: 75 },
+    { name: "Eve", grade: "A", score: 88 },
+    { name: "Dave", grade: "C", score: 65 },
+    { name: "Carol", grade: "B", score: 70 }
+];
+
+const groupByGrade = students.reduce((acc, student) => {
+    acc[student.grade] = acc[student.grade] || [];
+    acc[student.grade].push(student);
+    return acc;
+}, {});
+
+console.log(groupByGrade);
+
+
+
+Задача 3: Преобразование массива объектов
+Условие: Напишите функцию, которая принимает массив объектов, каждый из которых имеет поля name и price. Функция должна возвращать новый массив, где каждый элемент будет строкой вида "Product: [name], Price: [price]". Используйте map для создания этого массива.
+
+javascript
+Copy code
+const products = [
+    { name: "Milk", price: 20 },
+    { name: "Bread", price: 15 }
+];
+
+const productDescriptions = products.map(product => `Product: ${product.name}, Price: ${product.price}`);
+console.log(productDescriptions); // ["Product: Milk, Price: 20", "Product: Bread, Price: 15"]
+
+
+
+Задача 4: Функция динамической фильтрации
+Условие: Создайте страницу с текстовым полем для ввода максимальной цены и кнопкой. Под кнопкой должен быть список продуктов, которые фильтруются по введенной цене. Используйте addEventListener для обработки кликов и стрелочные функции для фильтрации массива продуктов.
+
+html
+Copy code
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Filter</title>
+</head>
+<body>
+    <input type="number" id="maxPrice" placeholder="Enter maximum price">
+    <button id="filterBtn">Filter</button>
+    <ul id="productList"></ul>
+    <script src="app.js"></script>
+</body>
+</html>
+JavaScript (app.js):
+
+javascript
+Copy code
+const products = [
+    { name: "Laptop", price: 800 },
+    { name: "Smartphone", price: 500 },
+    { name: "Tablet", price: 450 }
+];
+
+document.getElementById('filterBtn').addEventListener('click', () => {
+    const maxPrice = parseInt(document.getElementById('maxPrice').value);
+    const filteredProducts = products.filter(product => product.price <= maxPrice);
+    const productList = document.getElementById('productList');
+    productList.innerHTML = '';
+    filteredProducts.forEach(product => {
+        const listItem = document.createElement('li');
+        listItem.textContent = `Product: ${product.name}, Price: ${product.price}`;
+        productList.appendChild(listItem);
+    });
+});

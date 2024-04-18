@@ -13,6 +13,8 @@ document.getElementById('maxSpeed').innerText = "Max-speed: " + spaceship.maxSpe
 const btn = document.getElementById('toggle-manufacturer');
 btn.addEventListener ('click', () => {
     const manufacturerDetails = document.getElementById('manufacturer');
-    manufacturerDetails.style.display = manufacturerDetails.style.display === 'none' ? '' : 'none';
-    btn.innerText = manufacturerDetails.style.display === 'none' ? 'Show manufacturer' : 'Hide manufacturer';
+    // manufacturerDetails.style.display = manufacturerDetails.style.display === 'none' ? '' : 'none';  // исчезает и пустое место заполняется
+    manufacturerDetails.style.visibility = manufacturerDetails.style.visibility === 'hidden' ? '' : 'hidden'; // просто становится невидимым для глаз
+    // btn.innerText = manufacturerDetails.style.display === 'none' ? 'Show manufacturer' : 'Hide manufacturer';
+    btn.innerText = manufacturerDetails.style.visibility === 'hidden' ? 'Show manufacturer' : 'Hide manufacturer';
 });

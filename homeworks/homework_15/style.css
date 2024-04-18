@@ -1,0 +1,73 @@
+/* Основные стили страницы */
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f4f8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    width: 400px;
+    height: 500px;
+    text-align: center;
+}
+
+/* Стили для ввода и кнопок */
+input[type="number"], button {
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+    border: none;
+    width: calc(50% - 22px);
+    transition: all 0.3s ease;
+}
+
+input[type="number"] {
+    background-color: #e8e8e8;
+}
+
+button {
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Эффекты для кнопок при фокусировке */
+button:focus, input[type="number"]:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(100, 149, 237, 0.5);
+}
+
+/* Стили для списка продуктов */
+#product-list {
+    margin-top: 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    max-height: 300px; /* Фиксированная максимальная высота */
+    overflow-y: auto; /* Добавление скроллинга, если контент превышает высоту */
+}
+
+.product {
+    background-color: #f4f4f4;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+    transition: transform 0.2s;
+    border-bottom: 1px solid #ddd; /* Небольшой визуальный разделитель между продуктами */
+}
+
+.product:hover {
+    transform: scale(1.02);
+}
