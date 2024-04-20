@@ -1,0 +1,150 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body,
+html {
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+.main {
+    display: flex;
+    height: 100%;
+}
+
+.menu {
+    flex: 0 0 220px;
+    background: #e2dac794;
+    padding: 20px;
+}
+
+.menu-list {
+    display: block;
+    list-style: none;
+    margin-top: 100px;
+    margin-left: 40px;
+}
+
+.menu-item {
+    margin-bottom: 25px;
+}
+
+.menu-item a {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+    display: block;
+}
+
+.user-actions_item-search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form_search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    gap: 0 10px;
+}
+
+.btn_search {
+    display: flex;
+    position: absolute;
+    right: 3px;
+    top: 50%;
+    transform: translateY(-50%);  /* Центрируем кнопку по вертикали */
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.btn_search img {
+    width: 20px;
+}
+.input_search {
+    background-color: rgb(245, 245, 245);
+    border: none;
+    border-radius: 2px;
+    width: 250px;
+    height: 30px;
+    padding-left: 5px;
+    padding-right: 30px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.task-create {
+    flex: 1;
+    padding: 20px;
+}
+
+.task-create_title {
+    margin: 30px;
+    font-size: 24px;
+    color: #333;
+}
+
+
+
+
+
+
+.task-create_form {
+    background: #fff; /* Фон формы */
+    padding: 20px; /* Отступы внутри формы */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Тень для формы */
+    border-radius: 8px; /* Скругленные углы */
+    margin-top: 20px; /* Отступ сверху */
+}
+
+.task-create_label {
+    display: block; /* Элементы label будут блочными для лучшего управления */
+    margin-bottom: 15px; /* Отступ между полями */
+    font-size: 16px; /* Размер шрифта меток */
+    color: #333; /* Цвет текста меток */
+}
+
+.task-create_label p {
+    margin-bottom: 5px; /* Отступ между текстом метки и полем ввода */
+}
+
+input[type="text"],
+input[type="date"],
+textarea {
+    width: 100%; /* Ширина полей на всю доступную ширину */
+    padding: 8px; /* Отступ внутри полей */
+    border: 1px solid #ccc; /* Граница полей */
+    border-radius: 4px; /* Скругление углов полей */
+    box-sizing: border-box; /* Размеры включают padding и border */
+}
+
+textarea {
+    resize: none; /* Отключаем возможность изменения размера textarea */
+}
+
+input[type="reset"] {
+    background-color: #f44336; /* Красный фон кнопки сброса */
+    color: white; /* Белый текст на кнопке сброса */
+    border: none; /* Убираем границу */
+    border-radius: 4px; /* Скругление углов кнопки */
+    padding: 8px 16px; /* Отступы внутри кнопки */
+    cursor: pointer; /* Курсор в виде указателя */
+    margin-top: 10px; /* Отступ сверху */
+}
+
+.task-create_btn {
+    background-color: #4CAF50; /* Зеленый фон кнопки создания */
+    color: white; /* Белый текст на кнопке */
+    border: none; /* Убираем границу */
+    border-radius: 4px; /* Скругление углов кнопки */
+    padding: 10px 20px; /* Отступы внутри кнопки */
+    cursor: pointer; /* Курсор в виде указателя */
+    display: block; /* Блочный тип для правильного расположения */
+    width: 100%; /* Ширина на всю доступную ширину */
+    margin-top: 20px; /* Отступ сверху */
+}

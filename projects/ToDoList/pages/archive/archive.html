@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./archive.js" defer></script>
+    <link rel="stylesheet" href="./archive.css">
+</head>
+<body>
+    <main class="main">
+        <section class="menu">
+            <div class="container">
+                <ul class="menu-list">
+                    <li class="menu-item">
+                        <a href="../createTask/createTask.html" class="create-task">Создать</a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="/projects/ToDoList/index.html" class="schow-all">Все задачи</a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="./archive.html" class="archive">Архив</a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section class="tasks-list">
+            <search class="user-actions_item-search">
+                <form class="form_search" action="">
+                    <input class="input_search" type="search" placeholder="Enter search...">
+                    <button class="btn_search">
+                        <img src="/projects/ToDoList/images/search.svg" alt="Search">
+                    </button>
+                </form>
+            </search>
+            <h1 class="tasks-list_title">Список задач:</h1>
+            <div class="container">
+                <div class="task-item_list">
+                    <h2 class="task-item_title"></h2>
+                    <p class="task-item_content"></p>
+                    <span class="task-item_dateStart"></span>
+                    <span class="task-item_dateEnd"></span>
+                    <a href="/projects/ToDoList/pages/itemTask/itemTask.html" class="task-item_open">Задача 1</a>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./createTask.js" defer></script>
+    <link rel="stylesheet" href="./createTask.css">
+</head>
+
+<body>
+    <main class="main">
+        <section class="menu">
+            <div class="container">
+                <ul class="menu-list">
+                    <li class="menu-item">
+                        <a href="./createTask.html" class="create-task">Создать</a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="/projects/ToDoList/index.html" class="schow-all">Все задачи</a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="../archive/archive.html" class="archive">Архив</a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section class="task-create">
+            <search class="user-actions_item-search">
+                <form class="form_search" action="">
+                    <input class="input_search" type="search" placeholder="Enter search...">
+                    <button class="btn_search">
+                        <img src="/projects/ToDoList/images/search.svg" alt="Search">
+                    </button>
+                </form>
+            </search>
+            <h2 class="task-create_title">Создание задачи: </h2>
+            <form action="" class="task-create_form">
+                <label for="taskTitle" class="task-create_label">
+                    <p>Введите название:</p>
+                    <input type="text" name="taskTitle">
+                </label>
+                <label for="textarea" class="task-create_label">
+                    <p>Введите описание:</p>
+                    <textarea name="textarea" cols="30" rows="10" maxlength="300"
+                        placeholder="Макс длина 300 символов"></textarea>
+                    <input type="reset" name="textarea-reset" value="очистить">
+                </label>
+                <label for="dateEnd" class="task-create_label">
+                    <p>Дата и время события:</p>
+                    <input type="date" name="dateEnd" required>
+                </label>
+                <button class="task-create_btn">Создать</button>
+            </form>
+        </section>
+</body>
+
+</html>

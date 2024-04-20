@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./itemTask.js" defer></script>
+    <link rel="stylesheet" href="./itemTask.css">
+</head>
+
+<body>
+    <main class="main">
+        <section class="menu">
+            <div class="container">
+                <ul class="menu-list">
+                    <li class="menu-item">
+                        <a href="../createTask/createTask.html" class="create-task">Создать</a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="/projects/ToDoList/index.html" class="schow-all">Все задачи</a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="../archive/archive.html" class="archive">Архив</a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section class="task">
+            <search class="user-actions_item-search">
+                <form class="form_search" action="">
+                    <input class="input_search" type="search" placeholder="Enter search...">
+                    <button class="btn_search">
+                        <img src="/projects/ToDoList/images/search.svg" alt="Search">
+                    </button>
+                </form>
+            </search>
+            <div class="task-item">
+                <h2 class="task-item_title">Задача 1</h2>
+                <p class="task-item_content">Автосервис: смена колес. Не забыть!</p>
+                <span class="task-item_dateStart">Создано: 18.04.2024</span>
+                <span class="task-item_dateEnd">Событие: 21.04.2024, 15:00</span>
+                <a href="/projects/ToDoList/index.html" class="task-item_close">
+                    <img src="/projects/ToDoList/images/close.svg" alt="close">
+                </a>
+                <div class="user-actions_task">
+                    <a href="#" class="task-item_edit">изменить</a>
+                    <a href="#" class="task-item_delete">удалить</a>
+                    <a href="#" class="task-item_status">выполнено</a>
+                </div>
+
+                <form class="task-edit_form" style="display: none;">
+                    <label>
+                        Название:
+                        <input type="text" class="edit_title">
+                    </label>
+                    <label>
+                        Описание:
+                        <textarea class="edit_description"></textarea>
+                    </label>
+                    <label>
+                        Дата события:
+                        <input type="date" class="edit_dateEnd">
+                    </label>
+                    <button type="button" class="save_edit">Сохранить изменения</button>
+                    <button type="button" class="cancel_edit">Отмена</button>
+                </form>
+
+            </div>
+        </section>
+</body>
+
+</html>

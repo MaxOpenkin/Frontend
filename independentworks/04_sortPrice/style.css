@@ -1,0 +1,9 @@
+#itemsContainer {
+    display: flex;
+    flex-direction: column;
+  }
+  .item {
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+  }
