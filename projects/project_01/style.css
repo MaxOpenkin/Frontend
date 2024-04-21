@@ -278,8 +278,124 @@ body {
     padding: 100px 0;
     background-color: #F7F2EA;
     background-image: url(./images/mailing-bg.png);
+    background-repeat: no-repeat;
+    background-position: bottom right;
 }
 
+.mailing-list_title {
+    text-align: left;
+    margin-bottom: 50px;
+}
+
+.mailing-list_inner {
+    display: flex;
+    gap: 60px 40px;
+}
+
+.mailing-list_text {
+    line-height: 1.5;
+    flex-basis: 580px;
+}
+
+.mailing-list_form {
+    display: flex;
+    flex-wrap: wrap;
+    flex-basis: 580px;
+}
+
+.mailing-list_email {
+    border: none;
+    border-bottom: 1px solid #B8B58B;
+    background-color: transparent;
+    padding: 3px 15px;
+    width: 435px;
+    margin-right: 25px;
+    font-family: "Open Sans", sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 1.5;
+    color: #151618;
+}
+
+.mailing-list_email::placeholder {
+    font-family: "Open Sans", sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 1.5;
+    color: #B8B58B;
+}
+
+.mailing-list_btn {
+    background-color: white;
+    border: 1px solid #151618;
+    padding: 12px 41px;
+    font-family: "Open Sans", sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    cursor: pointer;
+}
+
+.checkbox_text {
+    font-size: 13px;
+    padding-left: 20px;
+}
+
+.mailing-list_label {
+    margin-top: 16px;
+}
+
+.checkbox {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    clip: rect(0, 0, 0, 0);
+    overflow: hidden;
+    padding-left: 20px;
+}
+
+.checkbox-style {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border: 1px solid #151618;
+    margin-top: 15px;
+}
+
+.checkbox:checked+.checkbox-style::before {
+    position: absolute;
+    content: '';
+    width: 6px;
+    height: 6px;
+    background-color: #151618;
+    top: 1px;
+    left: 1px;
+}
+
+.prioritise {
+    padding: 150px 0;
+}
+
+.prioritise_list {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px 49px;
+    padding-left: 0;
+}
+
+.prioritise_title {
+    font-size: 30px;
+    margin-bottom: 10px;
+    font-weight: 300;
+}
+
+.prioritise_text {
+    font-weight: 600;
+    margin-bottom: 30px;
+}
 
 
 
@@ -333,6 +449,53 @@ body {
 
     .reviews_item:last-child {
         display: none;
+    }
+
+    .main-blog {
+        padding: 120px 0;
+    }
+
+    .main-blog_item-img {
+        max-width: 230px;
+    }
+
+    .main-blog_item {
+        flex-basis: 440px;
+    }
+
+    .main-blog_list {
+        gap: 65px 12px;
+        padding-left: 0;
+    }
+
+    .main-blog_link {
+        margin-top: 60px;
+    }
+
+    .mailing-list_inner {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .mailing-list{
+        padding: 60px 0;
+    }
+
+    .mailing-list_title{
+        text-align: center;
+    }
+
+    .mailing-list_text{
+        text-align: center;
+        flex-basis: 780px;
+    }
+
+    .prioritise{
+        padding: 120px 0;
+    }
+
+    .prioritise_list{
+        gap: 30px 210px;
     }
 }
 
@@ -441,6 +604,30 @@ body {
         flex-wrap: wrap;
         gap: 30px 76px;
     }
+
+    .main-blog_item{
+        flex-basis: 540px;
+    }
+
+    .main-blog_item-img{
+        max-width: 270px;
+    }
+
+    .main-blog_list{
+        gap: 30px 20px;
+    }
+
+    .main-blog_item:nth-child(even){
+        margin-left: 98px;
+    }
+
+    .mailing-list_text{
+        flex-basis: 640px;
+    }
+
+    .prioritise_list{
+        gap: 30px 130px;
+    }
 }
 
 @media (max-width: 680px) {
@@ -467,6 +654,10 @@ body {
 
     .top_title {
         font-size: 40px;
+    }
+
+    .main-blog_item:nth-child(even){
+        margin-left: 0;
     }
 }
 
@@ -501,6 +692,40 @@ body {
 
     .reviews_item {
         flex-basis: 220px;
+    }
+    
+    .main-blog{
+        padding: 60px 0;
+    }
+
+    .main-blog_item-img{
+        max-width: 230px;
+    }
+
+    .mailing-list{
+        padding: 50px 0;
+    }
+
+    .mailing-list_text{
+        flex-basis: 100%;
+        font-size: 13px;
+    }
+
+    .mailing-list_inner{
+        gap: 30px 0;
+    }
+
+    .mailing-list_email{
+        width: 320px;
+        margin-right: 20px;
+    }
+
+    .mailing-list_btn{
+        padding: 10px 30px;
+    }
+
+    .prioritise{
+        padding: 60px 0;
     }
 }
 
@@ -557,5 +782,51 @@ body {
     .reviews_item:last-child,
     .reviews_item:first-child {
         display: none;
+    }
+
+    .main-blog{
+        padding: 50px 0;
+    }
+
+    .main-blog_item{
+        display: block;
+        max-width: 270px;
+    }
+
+    .main-blog_item-img{
+        max-width: 100%;
+    }
+
+    .main-blog_item:nth-child(even){
+        display: none;
+    }
+
+    .main-blog_list{
+        justify-content: center;
+    }
+
+    .main-blog_item-title{
+        min-height: auto;
+    }
+
+    .mailing-list_email{
+        width: 205px;
+    }
+
+    .prioritise{
+        padding: 50px 0;
+    }
+
+    .prioritise_title{
+        font-size: 20px;
+    }
+
+    .prioritise_text{
+        font-size: 10px;
+        font-weight: 400;
+    }
+
+    .prioritise_list{
+        gap: 40px 100px;
     }
 }
