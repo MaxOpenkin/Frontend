@@ -6,16 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css" />
     <link rel="shortcut icon" href="./feedback_rating_award_medal_badge_little_star_game_icon_262439.png"
         type="image/x-icon">
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./bootstrap.min.css">
+    <script src="./bootstrap.bundle.min.js" defer></script>
     <title>Frontend</title>
 </head>
 
 <body>
 
-    <div class="navbar">
+    <!-- <div class="navbar">
         <a href="./index.html">Home</a>
         <a href="#homeworks">Homeworks</a>
         <a href="#lessons">Lessons</a>
@@ -81,12 +82,192 @@
 
     <div class="footer">
         <p>Copyright © Max Openkin 2024</p>
+    </div> -->
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="./index.html">Frontend</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://github.com/MaxOpenkin/Frontend.git">MyRepository</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Menu
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a class="dropdown-item" href="#">
+                                    <p><i class="fas fa-chalkboard-teacher"></i> Projects</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#">
+                                    <p> <i class="fas fa-book-open"></i> Homeworks</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#">
+                                    <p><i class="fas fa-chalkboard-teacher"></i> Lessons</p>
+                                </a>
+                            </li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#">
+                                    <p> <i class="fas fa-book-open"></i> Independentworks</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#">
+                                    <p><i class="fas fa-chalkboard-teacher"></i> Consultations</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" aria-disabled="true">GoGoGo</a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-fluid container-img">
+        <img src="./security-break-grim-reaper-hacker.jpg" class="img-fluid grim" alt="grim">
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        AOS.init();
-    </script>
+
+    <div class="accordion" id="accordionPanelsStayOpenExample">
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true"
+                    aria-controls="panelsStayOpen-collapseOne">
+                    <p><i class="fas fa-chalkboard-teacher"></i> Projects:</p>
+                </button>
+            </h2>
+            <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse">
+                <div class="accordion-body">
+                    <ul id="projects">
+                        <li><a href="./projects/project_01/index.html">Site of Tea /adaptive</a></li>
+                        <li><a href="./projects/project_02/index.html">Calculator Dark/Light</a></li>
+                        <li><a href="./projects/ToDoList/index.html">ToDoList</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false"
+                    aria-controls="panelsStayOpen-collapseTwo">
+                    <p> <i class="fas fa-book-open"></i> Homeworks:</p>
+                </button>
+            </h2>
+            <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
+                <div class="accordion-body">
+                    <ul id="homeworks">
+                        <li><a href="./homeworks\homework_01\index.html">homework_01</a></li>
+                        <li><a href="./homeworks\homework_02\index.html">homework_02</a></li>
+                        <li><a href="./homeworks\homework_03\index.html">homework_03</a></li>
+                        <li><a href="./homeworks\homework_04\index.html">homework_04</a></li>
+                        <li><a href="./homeworks\homework_11\index.html">homework_11_addCardButton</a></li>
+                        <li><a href="./homeworks\homework_12\index.html">homework_12_passwordRepeat</a></li>
+                        <li><a href="./homeworks\homework_14\index.html">homework_14_SpaseschipHiddenBtn</a></li>
+                        <li><a href="./homeworks\homework_15\index.html">homework_15_productsFilter</a></li>
+                        <li><a href="./homeworks\homework_18\index.html">homework_18_Prototype</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false"
+                    aria-controls="panelsStayOpen-collapseThree">
+                    <p>Lessons:</p>
+                </button>
+            </h2>
+            <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse">
+                <div class="accordion-body">
+                    <ul id="lessons">
+                        <li><a href="./lessons\lesson_01\index.html">lesson_01_ul_table</a></li>
+                        <li><a href="./lessons\lesson_02\index.html">lesson_02_form</a></li>
+                        <li><a href="./lessons\lesson_03\index.html">lesson_03_css</a></li>
+                        <li><a href="./lessons\lesson_04\index.html">lesson_04_css</a></li>
+                        <li><a href="./lessons\lesson_05\index.html">lesson_05_css_position</a></li>
+                        <li><a href="./lessons\lesson_06\index.html">lesson_06_css_flex</a></li>
+                        <li><a href="./lessons\lesson_07\index.html">lesson_07_project</a></li>
+                        <li><a href="./lessons\lesson_08\index.html">lesson_08_js_start</a></li>
+                        <li><a href="./lessons\lesson_09\index.html">lesson_09_js_arrays_for</a></li>
+                        <li><a href="./lessons\lesson_11\index.html">lesson_11_js_dom</a></li>
+                        <li><a href="./lessons\lesson_12\index.html">lesson_12_js_event_form</a></li>
+                        <li><a href="./lessons\lesson_13\index.html">lesson_13_js_calculator</a></li>
+                        <li><a href="./lessons\lesson_14\index.html">lesson_14_js_object</a></li>
+                        <li><a href="./lessons\lesson_15\index.html">lesson_15_js_funcStream =></a></li>
+                        <li><a href="./lessons\lesson_16\index.html">lesson_16_js</a></li>
+                        <li><a href="./lessons/lesson_17_bootstrap/index.html">lesson_17_bootstrap</a></li>
+                        <li><a href="./lessons\lesson_18\index.html">lesson_18_Prototype</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#panelsStayOpen-collapseFour" aria-expanded="false"
+                    aria-controls="panelsStayOpen-collapseFour">
+                    <p>Independentworks:</p>
+                </button>
+            </h2>
+            <div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse">
+                <div class="accordion-body">
+                    <ul id="independentworks">
+                        <li><a href="./independentworks/independentwork_01/index.html">independentwork_01</a></li>
+                        <li><a href="./independentworks/independentwork_02/index.html">independentwork_02</a></li>
+                        <li><a href="./independentworks/independentwork_03/index.html">independentwork_03</a></li>
+                        <li><a href="./independentworks\04_sortPrice">04_sortPrice</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#panelsStayOpen-collapseFive" aria-expanded="false"
+                    aria-controls="panelsStayOpen-collapseFive">
+                    <p>Consultations:</p>
+                </button>
+            </h2>
+            <div id="panelsStayOpen-collapseFive" class="accordion-collapse collapse">
+                <div class="accordion-body">
+                    <ul id="consult">
+                        <li><a href="./consultations\cons_01\index.html">cons_01</a></li>
+                        <li><a href="./consultations\Sobesedovanie\Voprosy.txt">Sobesedovanie\Voprosy</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
 
 </body>
 
