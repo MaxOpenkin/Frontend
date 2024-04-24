@@ -26,54 +26,126 @@
 
 
 
-// Базовый объект персонажа:
+// function Character(name, health, level) {
+//     this.name = name;
+//     this.health = health;
+//     this.level = level;
+// };
+
+// Character.prototype.introduce = function () {
+//     console.log(`Hello, my name is ${this.name}, I am at level ${this.level}, and I have ${this.health} health.`);
+// };
+
+// function Warrior(name, health, level, weapon) {
+//     Character.call(this,name,health,level);
+//     this.weapon = weapon;
+// };
+
+// Warrior.prototype = Object.create(Character.prototype);
+// Warrior.prototype.constructor = Warrior;
+
+// Warrior.prototype.attack = function(){
+//     console.log(`${this.name} attacks with the ${this.weapon}!`);
+// };
+
+// function Wizard(name,health,level,spell){
+//     Character.call(this,name,health,level);
+//     this.spell = spell;
+// };
+
+// Wizard.prototype = Object.create(Character.prototype);
+// Wizard.prototype.constructor = Wizard;
+
+// Wizard.prototype.castSpell = function(){
+//     console.log(`${this.name} casts ${this.spell}!`);
+// };
+
+// const aragorn = new Warrior('Aragorn', 100, 10, 'Elven Sword');
+// const gandalf = new Wizard('Gandalf', 80, 15, 'Light of Eärendil');
+
+// aragorn.introduce();
+// aragorn.attack();
+// gandalf.introduce();
+// gandalf.castSpell();
+
+
+
+
 function Character(name, health, level) {
     this.name = name;
     this.health = health;
     this.level = level;
-};
+}
 
-// Метод introduce для всех персонажей:
-Character.prototype.introduce = function () {
+Character.prototype.introduce = function() {
     console.log(`Hello, my name is ${this.name}, I am at level ${this.level}, and I have ${this.health} health.`);
 };
 
-// Создаем объект warrior, наследуя от character:
 function Warrior(name, health, level, weapon) {
-    Character.call(this,name,health,level);
+    Character.call(this, name, health, level);
     this.weapon = weapon;
-};
+}
 
-// Наследуем методы от character:
 Warrior.prototype = Object.create(Character.prototype);
 Warrior.prototype.constructor = Warrior;
 
-// Метод attack для warrior:
-Warrior.prototype.attack = function(){
-    console.log(`${this.name} attacks with the ${this.weapon}!`);
+Warrior.prototype.attack = function(target) {
+    const damage = Math.floor(Math.random() * 20) + 1;
+    target.health -= damage;
+    return `${this.name} attacks ${target.name} with the ${this.weapon} for ${damage} damage.`;
 };
 
-// Создаем объект wizard, наследуя от character:
-function Wizard(name,health,level,spell){
-    Character.call(this,name,health,level);
+function Wizard(name, health, level, spell) {
+    Character.call(this, name, health, level);
     this.spell = spell;
-};
+}
 
-// Наследуем методы от character:
 Wizard.prototype = Object.create(Character.prototype);
 Wizard.prototype.constructor = Wizard;
 
-// Метод castSpell для wizard:
-Wizard.prototype.castSpell = function(){
-    console.log(`${this.name} casts ${this.spell}!`);
+Wizard.prototype.castSpell = function(target) {
+    const damage = Math.floor(Math.random() * 15) + 5;
+    target.health -= damage;
+    return `${this.name} casts ${this.spell} on ${target.name} causing ${damage} damage.`;
 };
 
-// Создаем экземпляры каждого персонажа:
 const aragorn = new Warrior('Aragorn', 100, 10, 'Elven Sword');
 const gandalf = new Wizard('Gandalf', 80, 15, 'Light of Eärendil');
 
-// Используем методы
-aragorn.introduce();
-aragorn.attack();
-gandalf.introduce();
-gandalf.castSpell();
+function updateStats() {
+    document.getElementById('name1').textContent = aragorn.name + ' (Warrior)';
+    document.getElementById('health1').textContent = 'Health: ' + aragorn.health;
+    document.getElementById('name2').textContent = gandalf.name + ' (Wizard)';
+    document.getElementById('health2').textContent = 'Health: ' + gandalf.health;
+}
+
+function logAction(action) {
+    document.getElementById('log').innerHTML += `<p>${action}</p>`;
+    updateStats();
+    checkGameOver();
+}
+
+function aragornTurn() {
+    if (gandalf.health > 0) {
+        const action = aragorn.attack(gandalf);
+        logAction(action);
+    }
+}
+
+function gandalfTurn() {
+    if (aragorn.health > 0) {
+        const action = gandalf.castSpell(aragorn);
+        logAction(action);
+    }
+}
+
+function checkGameOver() {
+    if (aragorn.health <= 0 || gandalf.health <= 0) {
+        const winner = aragorn.health > 0 ? aragorn.name : gandalf.name;
+        document.getElementById('log').innerHTML += `<p><strong>${winner} wins!</strong></p>`;
+        document.getElementById('character1').querySelector('button').disabled = true;
+        document.getElementById('character2').querySelector('button').disabled = true;
+    }
+}
+
+window.onload = updateStats;

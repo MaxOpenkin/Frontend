@@ -5,8 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="./index.js" defer></script>
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    
+    <div id="game">
+        <div id="character1" class="character">
+            <h2 id="name1"></h2>
+            <p id="health1"></p>
+            <button onclick="aragornTurn()">Aragorn's Turn</button>
+        </div>
+        <div id="character2" class="character">
+            <h2 id="name2"></h2>
+            <p id="health2"></p>
+            <button onclick="gandalfTurn()">Gandalf's Turn</button>
+        </div>
+        <div id="log"></div>
+    </div>
 </body>
 </html>
