@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./index.js" defer></script>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="timer-container">
+        <div class="time-setter">
+            <div class="label">час</div>
+            <button class="time-btn up" data-unit="hours" data-change="1">↑</button>
+            <span id="hours">00</span>
+            <button class="time-btn down" data-unit="hours" data-change="-1">↓</button>
+        </div>:
+        <div class="time-setter">
+            <div class="label">мин</div>
+            <button class="time-btn up" data-unit="minutes" data-change="1">↑</button>
+            <span id="minutes">00</span>
+            <button class="time-btn down" data-unit="minutes" data-change="-1">↓</button>
+        </div>:
+        <div class="time-setter">
+            <div class="label">сек</div>
+            <button class="time-btn up" data-unit="seconds" data-change="1">↑</button>
+            <span id="seconds">00</span>
+            <button class="time-btn down" data-unit="seconds" data-change="-1">↓</button>
+        </div>
+        <div class="buttons">
+            <button id="start">Старт</button>
+            <button id="pause">Пауза</button>
+            <button id="stop">Стоп</button>
+        </div>
+    </div>
+</body>
+</html>
