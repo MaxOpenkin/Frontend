@@ -37,13 +37,13 @@ function changeTime(unit, change) {
     if (newValue < 0) newValue = 59;
     if (newValue > 59) newValue = 0;
     unitSpan.textContent = newValue.toString().padStart(2, '0');
-}
+};
 
 function startTimer() {
     timer = setInterval(() => {
         decrementTime();
     }, 1000);
-}
+};
 
 function decrementTime() {
     let hours = parseInt(document.getElementById('hours').textContent);
@@ -70,16 +70,15 @@ function decrementTime() {
             }
         }
     }
-
     updateDisplay(hours, minutes, seconds);
-}
+};
 
 function updateDisplay(hours, minutes, seconds) {
     document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
     document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
     document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
-}
+};
 
 function resetTimer() {
     updateDisplay(0, 0, 0);
-}
+};
