@@ -1,0 +1,20 @@
+{
+  "title": "Universities by Country",
+  "showUniversities": "Show Universities",
+  "description": "Select a country to display its universities:",
+  "loadingMessage": "Loading universities...",
+  "errorMessage": "Failed to load data.",
+  "countries": {
+    "Kazakhstan": "Kazakhstan",
+    "Russia": "Russia",
+    "United States": "United States",
+    "United Kingdom": "United Kingdom",
+    "Canada": "Canada",
+    "Germany": "Germany",
+    "France": "France",
+    "Japan": "Japan",
+    "China": "China",
+    "Brazil": "Brazil",
+    "Australia": "Australia"
+  }
+}

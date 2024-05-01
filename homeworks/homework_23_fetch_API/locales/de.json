@@ -1,0 +1,20 @@
+{
+  "title": "Universitäten nach Land",
+  "showUniversities": "Universitäten anzeigen",
+  "description": "Wählen Sie ein Land, um seine Universitäten anzuzeigen:",
+  "loadingMessage": "Universitäten werden geladen...",
+  "errorMessage": "Daten konnten nicht geladen werden.",
+  "countries": {
+    "Kazakhstan": "Kasachstan",
+    "Russia": "Russland",
+    "United States": "Vereinigte Staaten",
+    "United Kingdom": "Vereinigtes Königreich",
+    "Canada": "Kanada",
+    "Germany": "Deutschland",
+    "France": "Frankreich",
+    "Japan": "Japan",
+    "China": "China",
+    "Brazil": "Brasilien",
+    "Australia": "Australien"
+  }
+}

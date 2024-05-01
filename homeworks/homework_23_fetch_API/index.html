@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./index.js" defer></script>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <select id="languageSelect">
+            <option value="ru">Русский</option>
+            <option value="en">English</option>
+            <option value="de">Deutsch</option>
+          </select>
+          <h1 id="pageTitle">Университеты по странам</h1>
+          <p id="description">Выберите страну, чтобы показать её университеты:</p>
+        <select id="countrySelect">
+            <option value="Kazakhstan">Казахстан</option>
+            <option value="Russia">Россия</option>
+            <option value="United States">Соединенные Штаты</option>
+            <option value="United Kingdom">Великобритания</option>
+            <option value="Canada">Канада</option>
+            <option value="Germany">Германия</option>
+            <option value="France">Франция</option>
+            <option value="Japan">Япония</option>
+            <option value="China">Китай</option>
+            <option value="Brazil">Бразилия</option>
+            <option value="Australia">Австралия</option>
+        </select>
+        <button id="showUniversities">Показать университеты</button>
+        <div id="universitiesContainer"></div>
+        <p id="errorMessage" style="display: none; color: red;"></p>
+    </div>
+
+</body>
+
+</html>
