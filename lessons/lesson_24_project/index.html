@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WeatherApp</title>
+    <script src="./index.js" defer></script>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <!-- https://openweathermap.org/ -->
+
+    <div class="container">
+        <div class="weather-form">
+            <input type="text" id="city-input" placeholder="Введите город">
+            <button id="fetch-weather-btn">Получить погоду</button>
+        </div>
+        <div class="weather-select">
+            <select id="units-select">
+                <option value="metric">Метрическая система (°C, м/с)</option>
+                <option value="imperial">Имперская система (°F, мили/ч)</option>
+                <option value="standard">Стандарт (Кельвин)</option>
+            </select>
+        </div>
+        <div class="weather-card" id="weather-result" style="display: none;">
+            <h2 id="location-name"></h2>
+            <div id="current-time" class="current-time"></div>
+            <img id="weather-icon" src="" alt="Weather Icon">
+            <div class="current-details">
+                <div class="temperature" id="temperature"></div>
+                <div class="description" id="description"></div>
+            </div>
+            <div class="weather-info">
+                <div id="wind"></div>
+                <div id="humidity"></div>
+                <div id="pressure"></div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
