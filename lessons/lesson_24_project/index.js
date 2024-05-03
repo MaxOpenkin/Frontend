@@ -32,17 +32,16 @@ function updateWeatherData(data, city, units) {
 };
 
 function formatTemperature(temp, units) {
-    let unitSymbol = '°C'; // Метрическая система по умолчанию
+    let unitSymbol = '°C';
     if (units === 'imperial') {
         unitSymbol = '°F';
     } else if (units === 'standard') {
         unitSymbol = 'K';
     }
 
-    const sign = temp > 0 ? '+' : '-'; // Добавляем знак '+' если температура положительная и обратно '-' если отрицат.
+    const sign = temp > 0 ? '+' : '';
     const color = temp > 0 ? '#ff8c00' : '#00f'; // Оранжевый для положительной, синий для отрицательной
 
-    // Возвращаем строку с HTML, содержащую стиль с динамическим цветом
     return `<span style="color:${color};">${sign}${Math.round(temp)}${unitSymbol}</span>`;
 };
 
