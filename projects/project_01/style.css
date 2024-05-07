@@ -397,6 +397,117 @@ body {
     margin-bottom: 30px;
 }
 
+.footer {
+    padding: 100px 0 20px;
+    background-color: #F7F2EA;
+}
+
+.footer_inner {
+    margin-bottom: 100px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0 40px;
+}
+
+.footer_products-title,
+.footer_company-title,
+.footer_contacts-title {
+    font-family: "Cormorant", serif;
+    font-size: 24px;
+    margin-bottom: 50px;
+    font-weight: 400;
+    margin-top: 0;
+}
+
+.footer_products-item,
+.footer_company-item {
+    margin-bottom: 20px;
+}
+
+.footer_blockquote-text {
+    margin-top: 80px;
+    font-style: italic;
+    margin-bottom: 20px;
+}
+
+.footer_blockquote-author{
+    font-size: 12px;
+    font-style: normal;
+}
+
+.footer_blockquote-author span {
+    display: block;
+}
+
+.footer_contacts-text {
+    font-size: 13px;
+    margin-bottom: 20px;
+}
+
+.footer_nav {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footer_nav-logo {
+    margin-right: 40px;
+}
+
+.footer_nav-contacts {
+    margin-top: 20px;
+}
+
+.footer_nav-phone,
+.footer_nav-email {
+    font-size: 13px;
+    position: relative;
+    padding-left: 32px;
+    display: block;
+    margin-bottom: 20px;
+}
+
+.footer_nav-phone::before,
+.footer_nav-email::before {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 0;
+    width: 22px;
+    height: 16px;
+    background-image: url(./images/mail.svg);
+}
+
+.footer_nav-phone::before {
+    background-image: url(./images/phone.svg);
+    width: 21px;
+    height: 21px;
+}
+
+.footer_social {
+    margin-top: 40px;
+    margin-left: 97px;
+}
+
+.footer_social-list {
+    display: flex;
+    align-items: center;
+    gap: 0 20px;
+}
+
+.footer_bottom {
+    display: flex;
+}
+
+.footer_copy {
+    margin-right: 192px;
+    font-size: 16px;
+}
+
+.partners-logo {
+    display: flex;
+    align-items: center;
+    gap: 0 20px;
+}
 
 
 
@@ -477,24 +588,24 @@ body {
         justify-content: center;
     }
 
-    .mailing-list{
+    .mailing-list {
         padding: 60px 0;
     }
 
-    .mailing-list_title{
+    .mailing-list_title {
         text-align: center;
     }
 
-    .mailing-list_text{
+    .mailing-list_text {
         text-align: center;
         flex-basis: 780px;
     }
 
-    .prioritise{
+    .prioritise {
         padding: 120px 0;
     }
 
-    .prioritise_list{
+    .prioritise_list {
         gap: 30px 210px;
     }
 }
@@ -605,27 +716,27 @@ body {
         gap: 30px 76px;
     }
 
-    .main-blog_item{
+    .main-blog_item {
         flex-basis: 540px;
     }
 
-    .main-blog_item-img{
+    .main-blog_item-img {
         max-width: 270px;
     }
 
-    .main-blog_list{
+    .main-blog_list {
         gap: 30px 20px;
     }
 
-    .main-blog_item:nth-child(even){
+    .main-blog_item:nth-child(even) {
         margin-left: 98px;
     }
 
-    .mailing-list_text{
+    .mailing-list_text {
         flex-basis: 640px;
     }
 
-    .prioritise_list{
+    .prioritise_list {
         gap: 30px 130px;
     }
 }
@@ -656,7 +767,7 @@ body {
         font-size: 40px;
     }
 
-    .main-blog_item:nth-child(even){
+    .main-blog_item:nth-child(even) {
         margin-left: 0;
     }
 }
@@ -693,38 +804,38 @@ body {
     .reviews_item {
         flex-basis: 220px;
     }
-    
-    .main-blog{
+
+    .main-blog {
         padding: 60px 0;
     }
 
-    .main-blog_item-img{
+    .main-blog_item-img {
         max-width: 230px;
     }
 
-    .mailing-list{
+    .mailing-list {
         padding: 50px 0;
     }
 
-    .mailing-list_text{
+    .mailing-list_text {
         flex-basis: 100%;
         font-size: 13px;
     }
 
-    .mailing-list_inner{
+    .mailing-list_inner {
         gap: 30px 0;
     }
 
-    .mailing-list_email{
+    .mailing-list_email {
         width: 320px;
         margin-right: 20px;
     }
 
-    .mailing-list_btn{
+    .mailing-list_btn {
         padding: 10px 30px;
     }
 
-    .prioritise{
+    .prioritise {
         padding: 60px 0;
     }
 }
@@ -784,49 +895,49 @@ body {
         display: none;
     }
 
-    .main-blog{
+    .main-blog {
         padding: 50px 0;
     }
 
-    .main-blog_item{
+    .main-blog_item {
         display: block;
         max-width: 270px;
     }
 
-    .main-blog_item-img{
+    .main-blog_item-img {
         max-width: 100%;
     }
 
-    .main-blog_item:nth-child(even){
+    .main-blog_item:nth-child(even) {
         display: none;
     }
 
-    .main-blog_list{
+    .main-blog_list {
         justify-content: center;
     }
 
-    .main-blog_item-title{
+    .main-blog_item-title {
         min-height: auto;
     }
 
-    .mailing-list_email{
+    .mailing-list_email {
         width: 205px;
     }
 
-    .prioritise{
+    .prioritise {
         padding: 50px 0;
     }
 
-    .prioritise_title{
+    .prioritise_title {
         font-size: 20px;
     }
 
-    .prioritise_text{
+    .prioritise_text {
         font-size: 10px;
         font-weight: 400;
     }
 
-    .prioritise_list{
+    .prioritise_list {
         gap: 40px 100px;
     }
 }
