@@ -19,6 +19,8 @@
     <link rel="stylesheet" href="./style.css" />
     <link rel="stylesheet" href="./bootstrap.min.css" />
     <script src="./bootstrap.bundle.min.js" defer></script>
+
+  <script src="./main.js" defer></script>
     <title>Frontend</title>
   </head>
 
@@ -251,7 +253,7 @@
             aria-expanded="false"
             aria-controls="panelsStayOpen-collapseTwo"
           >
-            <p><i class="fas fa-th-list"></i>JS Topics:</p>
+            <p><i class="fas fa-th-list"></i> JS Topics:</p>
           </button>
         </h2>
         <div
@@ -505,6 +507,7 @@
     <section class="docs">
       <div class="container">
         <div class="docs_inner">
+          <p class="docs-title">Docs:</p>
           <ul class="docs_list">
             <li class="docs_list-item">
               <a href="https://swiperjs.com/" class="docs-link"
@@ -525,7 +528,7 @@
     <section class="references">
       <div class="container">
         <div class="references_inner">
-          <p class="references-title">Youtube channels</p>
+          <p class="references-title">Youtube channels:</p>
           <ul class="references_list">
             <li class="references-item">
               <a href="https://www.youtube.com/@vadymprokopchuk/videos" class="references-link"
@@ -559,9 +562,18 @@
 
     <section class="images">
       <div class="container">
+        <p class="images-title">Images:</p>
         <div class="images_inner">
-          
+          <img class="clickable-image" src="./gallery/images/0_YeaUsQyhXSL1TCTH.png" alt="">
+          <img class="clickable-image" src="./gallery/images/1ja49d3svo191.png" alt="">
+          <img class="clickable-image" src="./gallery/images/0FXCL50ctHw.jpg" alt="">
+          <img class="clickable-image" src="./gallery/images/cs-html-1.png" alt="">
         </div>
+      </div>
+
+      <div id="modal" class="modal">
+        <span id="close" class="close">&times;</span>
+        <img class="modal-content" id="modal-img">
       </div>
     </section>
   </body>
