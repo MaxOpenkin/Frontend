@@ -62,6 +62,8 @@ body {
   font-size: 16px;
   line-height: 1.4;
   color: #5c5c5e;
+  min-width: 320px;
+  overflow-x: hidden;
 }
 
 .header {
@@ -75,6 +77,20 @@ body {
   height: 80px;
 }
 
+.menu_btn {
+  display: none;
+  width: 40px;
+  height: 30px;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.menu_btn span {
+  width: 100%;
+  height: 2px;
+  background-color: #070707;
+}
+
 .menu {
   display: flex;
   gap: 0 20px;
@@ -82,6 +98,7 @@ body {
 
 .logo {
   justify-self: center;
+  display: flex;
 }
 
 .basket {
@@ -209,7 +226,7 @@ box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); */
   gap: 40px;
   opacity: 0;
   position: absolute;
-  transition: opacity .3s ease;
+  transition: opacity 0.3s ease;
 }
 
 .tabs_content-item-active {
@@ -224,6 +241,7 @@ box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); */
 .tabs_content-img {
   grid-row: 1/-1;
   align-self: stretch;
+  object-fit: cover;
 }
 
 .tabs_content-box h3 {
@@ -297,35 +315,476 @@ box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); */
   text-transform: uppercase;
   font-weight: 700;
   padding: 16px 15px 12px;
-  border: 1px solid #bc10d8;
+  border: 1px solid;
+  border-image: linear-gradient(180deg, #bc10d8 0%, #5000faed 100%) 1;
   width: 225px;
   text-align: center;
 }
 
 .game_item {
   padding: 10px 20px 18px;
-  border: 1px solid #bc10d8;
+  border: 1px solid;
+  border-image: linear-gradient(180deg, #bc10d8 0%, #5000faed 100%) 1;
   display: flex;
   flex-direction: column;
 }
 
 .game_item-img {
-margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 .game_item-title {
-font-size: 24px;
-margin-bottom: 10px;
+  font-size: 24px;
+  margin-bottom: 10px;
 }
 
 .game_item-text {
-margin-bottom: 30px;
+  margin-bottom: 30px;
 }
 
 .game_item-link {
-background: linear-gradient(180deg, #BC10D8 0%, rgba(80, 0, 250, 0.93) 100%);
--webkit-background-clip: text;
--webkit-text-fill-color: transparent;
-background-clip: text;
-margin-top: auto;
+  background: linear-gradient(180deg, #bc10d8 0%, rgba(80, 0, 250, 0.93) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-top: auto;
+}
+
+.buy {
+  position: relative;
+  margin-bottom: 110px;
+  text-align: center;
+  overflow-x: hidden;
+}
+
+.buy_img {
+  margin-bottom: 30px;
+}
+
+.buy .buy-btn {
+  margin: 0 auto;
+}
+
+.buy_bg {
+  font-weight: 700;
+  font-size: 400px;
+  line-height: 400px;
+
+  background: linear-gradient(180deg, #bc10d8 0%, rgba(80, 0, 250, 0.93) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  opacity: 0.1;
+
+  position: absolute;
+  z-index: -1;
+
+  animation: line-text 6s linear 1s infinite;
+}
+
+@keyframes line-text {
+  from {
+    transform: translateX(115%);
+    transform-origin: left center;
+  }
+  to {
+    transform: translateX(-115%);
+    transform-origin: right center;
+  }
+}
+
+.equipment {
+  margin-bottom: 100px;
+}
+
+.equipment_title {
+  margin-bottom: 50px;
+}
+
+.equipment_box {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  grid-template-rows: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.equipment_box-img {
+  margin-bottom: 10px;
+}
+
+.equipment_box-title {
+  font-size: 36px;
+  line-height: 50px;
+  text-transform: uppercase;
+  background: linear-gradient(180deg, #bc10d8 0%, rgba(80, 0, 250, 0.93) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+.equipment_box-item--one {
+  grid-row: 1/-1;
+}
+
+.promo {
+  margin-bottom: 100px;
+}
+
+.promo_inner {
+  background-image: url(../images/promo.jpg);
+  min-height: 500px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  text-align: center;
+  position: relative;
+}
+
+.promo_btn {
+  font-weight: 700;
+  color: #fff;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(180deg, #bc10d8 0%, rgba(80, 0, 250, 0.93) 100%);
+  position: absolute;
+  bottom: 80px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+
+.accessories {
+  margin-bottom: 100px;
+}
+
+.accessories_title {
+  margin-bottom: 30px;
+}
+
+.accessories_text {
+  margin-bottom: 30px;
+  font-size: 36px;
+  line-height: 41px;
+  text-transform: uppercase;
+  background: linear-gradient(180deg, #bc10d8 0%, rgba(80, 0, 250, 0.93) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+.accessories_items {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.accessories_item {
+  padding: 20px;
+  border: 1px solid;
+  border-image: linear-gradient(180deg, #bc10d8 0%, #5000faed 100%) 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.accessories_item-img {
+  margin-bottom: 10px;
+}
+
+.accessories_item-title {
+  font-size: 24px;
+  color: #070707;
+  min-height: 67px;
+}
+
+.accessories_item-text {
+  margin-bottom: 35px;
+  margin-top: auto;
+}
+
+.accessories_item-price {
+  font-weight: 700;
+  line-height: 18px;
+  color: #070707;
+  margin-bottom: 20px;
+  margin-top: auto;
+}
+
+.accessories_item-btn {
+  border: 1px solid;
+  border-image: linear-gradient(180deg, #bc10d8 0%, #5000faed 100%) 1;
+  padding: 6px;
+  font-weight: 700;
+  text-align: center;
+  width: 100%;
+  cursor: pointer;
+
+  background: linear-gradient(180deg, #bc10d8 0%, rgba(80, 0, 250, 0.93) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+.contacts {
+  margin-bottom: 100px;
+}
+
+.contacts_title {
+  font-size: 24px;
+  line-height: 33px;
+  color: #070707;
+}
+
+.contacts_inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+}
+
+.contacts_form {
+  flex-basis: 600px;
+}
+
+.form {
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.form_input {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #cacad6;
+  padding: 22px 70px 22px 0;
+}
+
+.form_input::placeholder {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 18px;
+  color: #cacad6;
+}
+
+.form_btn {
+  width: 50px;
+  height: 50px;
+  background-color: #cacad6;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #5c5c5e;
+  border-radius: 50%;
+  position: absolute;
+  right: 0;
+  bottom: 5px;
+}
+
+.contacts_text {
+  font-size: 13px;
+}
+
+.footer {
+  border-top: 1px solid #cacad6;
+  border-bottom: 1px solid #cacad6;
+  margin-bottom: 44px;
+  padding: 30px 0;
+}
+
+.social {
+  display: flex;
+  gap: 20px;
+  justify-self: end;
+}
+
+@media (max-width: 1140px) {
+.footer .menu {
+  display: none;
+}
+
+.footer .nav{
+  display: flex;
+  justify-content: space-between;
+}
+}
+
+@media (max-width: 992px) {
+  .tabs {
+    display: block;
+  }
+
+  .tabs_btn {
+    display: block;
+    column-count: 2;
+  }
+
+  .tabs_btn-item {
+    display: block;
+  }
+
+  .game_inner {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+  }
+
+  .accessories_items {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+}
+
+@media (max-width: 820px) {
+  .equipment_box {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .contacts_inner {
+    display: block;
+  }
+
+  .contacts_form {
+    margin-bottom: 20px;
+  }
+
+  .menu_btn {
+    display: flex;
+  }
+
+  .menu {
+    transform: translateX(-100%);
+    transition: transform 1s;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    right: 0;
+    width: 320px;
+    background-color: #000;
+    color: #fff;
+    padding: 100px 0;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .menu_link {
+    display: inline-block;
+    font-size: 24px;
+    padding: 10px 0;
+  }
+
+  .menu.menu-active {
+    transform: translateX(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 66px;
+  }
+
+  .subtitle {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 640px) {
+  .top {
+    text-align: center;
+  }
+
+  .buy-btn {
+    flex-direction: column;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 568px) {
+  .features_titles {
+    display: block;
+  }
+
+  .tabs_content-item {
+    display: block;
+    height: 0;
+    position: relative;
+  }
+
+  .tabs_content-item-active {
+    height: auto;
+  }
+
+  .video {
+    margin-top: 20px;
+    width: auto;
+    height: 250px;
+  }
+
+  .game_inner {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .equipment_box {
+    display: block;
+  }
+
+  .equipment_box-img {
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .equipment_box-text {
+    margin-bottom: 10px;
+  }
+
+  .accessories_items {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 20px;
+  }
+
+  .accessories_text {
+    font-size: 28px;
+  }
+
+  .nav {
+    grid-template-columns: 1fr 2fr 1fr;
+  }
+
+  .footer .nav {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .social {
+    order: -1;
+    margin-bottom: 20px;
+    gap: 30px;
+  }
+}
+
+@media (max-width: 420px) {
+  .title {
+    font-size: 48px;
+  }
+
+  .subtitle {
+    font-size: 20px;
+  }
+
+  .tabs_btn {
+    column-count: 1;
+  }
+
+  .features_text {
+    font-size: 32px;
+  }
+
+  .menu{
+    width: 100%;
+  }
 }

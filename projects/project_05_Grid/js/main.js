@@ -24,3 +24,11 @@ function open (evt) {
 
     document.querySelector(`#${button}`).classList.add('tabs_content-item-active');
 }
+
+const menuBtn = document.querySelector('.menu_btn');
+const menu = document.querySelector('.menu');
+
+menuBtn.addEventListener('click', () => {
+    menu.classList.toggle('menu-active');
+});
+
